@@ -1,0 +1,2237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    background-color: #f5f5f0;
+    color: #1e1e1e;
+    line-height: 1.4;
+}
+
+/* Utilidades */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nav-links li a.active-section {
+    font-weight: bold;
+    color: #81638B;  /* Tu color morado */
+    border-bottom: 2px solid #81638B;
+    padding-bottom: 5px;
+}
+/* Barra superior negra (último momento / fecha) */
+.top-bar {
+    background-color: #111;
+    color: #ddd;
+    font-size: 0.8rem;
+    padding: 8px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid #333;
+}
+
+.top-bar .breaking {
+    color: #ffcc00;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.top-bar .date {
+    letter-spacing: 0.5px;
+}
+
+.top-bar .right-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.75rem;
+}
+
+.top-bar .right-links a:hover {
+    color: white;
+}
+
+/* Header principal */
+.main-header {
+    background: white;
+    padding: 20px 0;
+    border-bottom: 3px solid #81638B;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.logo h1 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #1a1a1a;
+    font-family: 'Times New Roman', serif;
+}
+
+.logo span {
+    color: #81638B;
+    font-style: italic;
+}
+
+.logo p {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #555;
+}
+
+.header-extra {
+    text-align: right;
+    font-size: 0.8rem;
+    font-family: Arial;
+}
+
+.header-extra .edicion {
+    background: #f0ede8;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* Navegación principal */
+.nav-main {
+    background: white;
+    border-bottom: 1px solid #e0ddd5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+    flex-wrap: wrap;
+    padding: 12px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #1e1e1e;
+    letter-spacing: 0.5px;
+}
+
+.nav-links li a:hover {
+    color: #81638B;
+}
+
+.search-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #444;
+}
+
+/* Hero (noticia principal) */
+.hero {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hero-img {
+    background: #cbd5e0;
+    min-height: 320px;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    padding: 25px 25px 25px 0;
+}
+
+.hero-category {
+    color: #81638B;
+    text-transform: uppercase;
+    font-family: Arial;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    margin: 15px 0 12px;
+    line-height: 1.2;
+}
+
+.hero-title a {
+    text-decoration: none;
+    color: #111;
+}
+
+.hero-title a:hover {
+    text-decoration: underline;
+}
+
+.hero-summary {
+    color: #3a3a3a;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.author-date {
+    font-family: Arial;
+    font-size: 0.7rem;
+    color: #6b6b6b;
+}
+
+/* Grid de noticias (dos columnas principales) */
+.two-columns {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+/* Sección de noticias */
+.section-title {
+    font-family: Arial, sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-left: 5px solid #81638B;
+    padding-left: 12px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.news-card {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e2dc;
+}
+
+.news-card-img {
+    flex: 0 0 120px;
+    background: #b0bec5;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+}
+
+.news-card-content {
+    flex: 1;
+}
+
+.news-card-category {
+    font-family: Arial;
+    font-size: 0.7rem;
+    color: #81638B;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.news-card-title {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.news-card-title a {
+    text-decoration: none;
+    color: #111;
+}
+
+.news-card-title a:hover {
+    text-decoration: underline;
+}
+
+.news-date {
+    font-family: Arial;
+    font-size: 0.7rem;
+    color: #777;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #faf9f6;
+    padding: 0 15px;
+}
+
+.sidebar-block {
+    margin-bottom: 35px;
+}
+
+.sidebar-title {
+    font-family: Arial;
+    font-weight: bold;
+    border-bottom: 2px solid #81638B;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.sidebar-list {
+    list-style: none;
+}
+
+.sidebar-list li {
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #ddd;
+    padding-bottom: 10px;
+}
+
+.sidebar-list li a {
+    text-decoration: none;
+    color: #1e1e1e;
+    font-weight: 500;
+    font-family: Arial;
+    font-size: 0.9rem;
+}
+
+.sidebar-list li a:hover {
+    color: #81638B;
+}
+
+/* Sección de newsletters */
+.newsletter {
+    background: #1f2937;
+    color: white;
+    padding: 40px 0;
+    margin: 40px 0;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.newsletter h3 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.newsletter button {
+    background: #81638B;
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    font-weight: bold;
+    border-radius: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: Arial;
+    transition: background 0.2s;
+}
+
+.newsletter button:hover {
+    background: #9e1e23;
+}
+
+/* Otras noticias (grid 3) */
+.more-news {
+    margin: 40px 0;
+}
+
+.grid-three {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-mini {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-mini:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-mini-img {
+    background: #a0aec0;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-mini-content {
+    padding: 15px;
+}
+
+.card-mini-category {
+    color: #81638B;
+    font-family: Arial;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.card-mini-title {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background: #ccc;
+    color: #ccc;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+    font-family: Arial;
+    font-size: 0.8rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col h4 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #2a2a2a;
+    font-size: 0.7rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content {
+        padding: 20px;
+    }
+    
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .logo h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    
+    .news-card {
+        flex-direction: column;
+    }
+    
+    .news-card-img {
+        flex: 0 0 auto;
+        width: 100%;
+        height: 140px;
+    }
+}
+/* Sección Opinión + Podcast */
+.opinion-podcast {
+    margin: 50px 0;
+}
+
+.opinion-subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.editorial-block {
+    background: #faf9f6;
+    padding: 20px;
+    border-left: 4px solid #81638B;
+    margin-bottom: 25px;
+}
+
+.editorial-tag {
+    font-family: Arial;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #81638B;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.editorial-title {
+    font-size: 1.35rem;
+    margin: 10px 0;
+    line-height: 1.3;
+}
+
+.editorial-date {
+    font-family: Arial;
+    font-size: 0.7rem;
+    color: #777;
+}
+
+.opinion-columnistas {
+    margin-top: 20px;
+}
+
+.opinion-links {
+    margin-bottom: 20px;
+    font-family: Arial;
+    font-size: 0.85rem;
+}
+
+.opinion-link {
+    text-decoration: none;
+    color: #81638B;
+    font-weight: bold;
+}
+
+.separator {
+    color: #ccc;
+    margin: 0 8px;
+}
+
+.opinion-article {
+    background: white;
+    padding: 15px;
+    border: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.opinion-text {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.opinion-author {
+    font-family: Arial;
+    font-size: 0.75rem;
+    color: #81638B;
+}
+
+.ver-mas {
+    text-decoration: none;
+    color: #81638B;
+    font-family: Arial;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Podcast Section */
+.podcast-section {
+    background: linear-gradient(135deg, #81638B 0%, #191414 100%);
+    border-radius: 16px;
+    padding: 25px;
+    color: white;
+}
+
+.podcast-badge {
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-family: Arial;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.podcast-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.podcast-episode h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.podcast-date {
+    font-size: 0.7rem;
+    opacity: 0.8;
+    margin-bottom: 15px;
+    font-family: Arial;
+}
+
+.spotify-save {
+    display: inline-block;
+    margin-top: 15px;
+    color: white;
+    text-decoration: none;
+    background: rgba(0,0,0,0.5);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-family: Arial;
+    transition: background 0.2s;
+}
+
+.spotify-save:hover {
+    background: #1DB954;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .opinion-podcast .two-columns {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .podcast-title {
+        font-size: 1.4rem;
+    }
+}
+/* Estilos para fotos de perfil / avatares */
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-color: #81638B;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.small-avatar {
+    width: 35px;
+    height: 35px;
+}
+
+.author-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #1e1e1e;
+}
+
+.article-author-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.article-content {
+    flex: 1;
+}
+
+/* Ajuste para el artículo de opinión */
+.opinion-article {
+    background: white;
+    padding: 15px;
+    border: 1px solid #eee;
+    margin-bottom: 15px;
+    transition: box-shadow 0.2s;
+}
+
+.opinion-article:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.opinion-text {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.opinion-author {
+    font-family: Arial;
+    font-size: 0.75rem;
+    color: #81638B;
+    margin: 0;
+}
+
+/* Mejora responsive para móviles */
+@media (max-width: 600px) {
+    .article-author-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .small-avatar {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .author-avatar {
+        width: 35px;
+        height: 35px;
+    }
+}
+/* Contenedor de dos columnas paralelas */
+.two-columns-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 50px 0;
+    align-items: start;
+}
+
+/* Asegurar que ambas columnas tengan el mismo alto en desktop */
+.opinion-section,
+.podcast-section {
+    height: 100%;
+}
+
+/* Estilos para el widget simulado de Spotify */
+.spotify-widget {
+    margin: 20px 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.spotify-mock {
+    background: #121212;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #282828;
+    transition: background 0.2s;
+}
+
+.spotify-mock:hover {
+    background: #1f1f1f;
+}
+
+.spotify-icon {
+    font-size: 2rem;
+    background: #1DB954;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+.spotify-text {
+    flex: 1;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.spotify-text strong {
+    font-size: 0.95rem;
+}
+
+.spotify-text span {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.spotify-play {
+    background: #1DB954;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: transform 0.1s;
+}
+
+.spotify-play:hover {
+    transform: scale(1.05);
+}
+
+/* Si quieres usar el iframe real de Spotify, usa esto en lugar de .spotify-mock */
+.spotify-iframe {
+    width: 100%;
+    border-radius: 12px;
+    border: none;
+}
+
+/* Responsive: en móviles se apilan */
+@media (max-width: 768px) {
+    .two-columns-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/*Seccion horoscopo*/
+
+/* Marco tipo Polaroid */
+.alternate-img-same {
+    width: 100%;
+    max-width: 500px;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    background: white;
+    padding: 10px 10px 35px 10px;  /* Espacio inferior tipo polaroid */
+    border: 1px solid #e8e4dc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.alternate-img-same:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Clase unificada para que todas las imágenes tengan la misma medida */
+.alternate-img-same {
+    width: 100%;
+    max-width: 500px;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+    margin: 0 auto;
+}
+
+/* Ajuste para pantallas medianas */
+@media (max-width: 900px) {
+    .alternate-img-same {
+        height: 250px;
+        max-width: 100%;
+    }
+}
+
+/* Ajuste para móviles */
+@media (max-width: 600px) {
+    .alternate-img-same {
+        height: 200px;
+    }
+}
+
+/* Secciones alternadas (imagen + texto) */
+.alternate-section {
+    padding: 60px 0;
+}
+
+.alt-bg {
+    background-color: #f8f8f5;
+}
+
+.alternate-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.alternate-img {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.alternate-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.alternate-img:hover img {
+    transform: scale(1.02);
+}
+
+.alternate-category {
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #81638B;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.alternate-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #1e1e1e;
+}
+
+.alternate-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.alternate-link {
+    display: inline-block;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #81638B;
+    transition: color 0.2s;
+}
+
+.alternate-link:hover {
+    color: #634d6b;
+    text-decoration: underline;
+}
+
+/*Seccion imagen con texto rodeada*/
+
+/* Estilos para artículo con imagen alternada */
+.articulo-envuelto {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.article-header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0ddd5;
+    padding-bottom: 20px;
+}
+
+.article-category {
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #81638B;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.article-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #1e1e1e;
+}
+
+.article-meta {
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    color: #777;
+    display: flex;
+    gap: 15px;
+}
+
+/* Contenedor imagen a la DERECHA */
+.article-content-right {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.article-content-right .article-text {
+    flex: 1;
+}
+
+.wrap-image-right {
+    flex: 0 0 320px;
+}
+
+/* Contenedor imagen a la IZQUIERDA */
+.article-content-left {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    flex-direction: row;
+}
+
+.article-content-left .article-text {
+    flex: 1;
+}
+
+.wrap-image-left {
+    flex: 0 0 320px;
+}
+
+/* Estilos de la imagen */
+.floating-img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #d4cfc4;
+    padding: 6px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.img-caption {
+    font-family: Arial, sans-serif;
+    font-size: 0.65rem;
+    color: #888;
+    margin-top: 8px;
+    font-style: italic;
+    text-align: center;
+}
+
+.article-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: #333;
+    text-align: justify;
+}
+
+/* Listas */
+.article-text ol, .article-text ul {
+    margin: 20px 0 20px 30px;
+}
+
+.article-text li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Separador entre secciones */
+.articulo-separator {
+    margin: 50px 0 40px;
+    border-top: 2px solid #e0ddd5;
+    position: relative;
+}
+
+.articulo-separator::before {
+    content: "✦ ✦ ✦";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 0 20px;
+    color: #81638B;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .articulo-envuelto {
+        padding: 20px;
+    }
+    
+    .article-title {
+        font-size: 1.8rem;
+    }
+    
+    .article-content-right,
+    .article-content-left {
+        flex-direction: column;
+    }
+    
+    .wrap-image-right,
+    .wrap-image-left {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .article-text p {
+        font-size: 0.95rem;
+    }
+    
+    .articulo-separator {
+        margin: 35px 0 25px;
+    }
+}
+
+/* Sección final con imagen y redes sociales */
+.footer-bottom {
+    background: white;
+    border-top: 3px solid #81638B;
+    padding: 45px 0 30px;
+    margin-top: 50px;
+}
+
+.footer-bottom-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr 0.8fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Columna izquierda - Contexto 39 imagen */
+.contexto-col {
+    text-align: center;
+}
+
+.contexto-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 70px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Columna central - Enlaces legales */
+.links-col {
+    text-align: center;
+}
+
+.legal-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+.legal-links li a {
+    text-decoration: none;
+    color: #555;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    transition: color 0.2s;
+}
+
+.legal-links li a:hover {
+    color: #81638B;
+}
+
+/* Miembros de */
+.members-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.members-label {
+    color: #888;
+    font-family: Arial, sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.members-logos {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.member-img {
+    height: 25px;
+    width: auto;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.member-img:hover {
+    opacity: 1;
+}
+
+/* Columna derecha - Redes Sociales */
+.social-col {
+    text-align: center;
+}
+
+.social-title {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(0.4);
+    transition: filter 0.2s;
+}
+
+.social-link:hover .social-icon {
+    filter: brightness(0) saturate(100%) invert(42%) sepia(47%) saturate(600%) hue-rotate(250deg) brightness(0.9);
+}
+
+/* Copyright */
+.copyright-footer {
+    text-align: center;
+    padding-top: 35px;
+    margin-top: 30px;
+    border-top: 1px solid #eaeaea;
+}
+
+.copyright-footer p {
+    color: #999;
+    font-family: Arial, sans-serif;
+    font-size: 0.7rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer-bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+    }
+    
+    .contexto-img {
+        max-height: 55px;
+    }
+    
+    .legal-links {
+        gap: 10px 15px;
+    }
+    
+    .social-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .members-section {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .legal-links li a {
+        font-size: 0.65rem;
+    }
+    
+    .social-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+/* Sección de videos carrusel */
+.video-carousel-section {
+    margin: 50px 0;
+    background: #f8f8f5;
+    padding: 40px 0;
+    border-radius: 12px;
+}
+
+.video-carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.video-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    padding: 10px 5px;
+    flex: 1;
+}
+
+/* Ocultar scrollbar en Chrome/Safari pero mantener funcionalidad */
+.video-carousel::-webkit-scrollbar {
+    height: 6px;
+}
+
+.video-carousel::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+.video-carousel::-webkit-scrollbar-thumb {
+    background: #81638B;
+    border-radius: 10px;
+}
+
+/* Tarjetas de video */
+.video-card {
+    flex: 0 0 calc(25% - 15px);
+    min-width: 250px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.video-thumbnail {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.video-card:hover .video-thumbnail img {
+    transform: scale(1.05);
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.video-card:hover .play-icon {
+    opacity: 1;
+}
+
+.video-info {
+    padding: 12px;
+}
+
+.video-info h4 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    line-height: 1.3;
+    color: #1e1e1e;
+}
+
+.video-info p {
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+.info-card {
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+.video-duration {
+    font-size: 0.7rem;
+    color: #81638B;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+/* Botones del carrusel */
+.carousel-btn {
+    background: #81638B;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+    background: #634d6b;
+    transform: scale(1.05);
+}
+
+.carousel-btn:active {
+    transform: scale(0.95);
+}
+
+/* Indicadores (dots) */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.2s, width 0.2s;
+}
+
+.dot.active {
+    background: #81638B;
+    width: 25px;
+    border-radius: 5px;
+}
+
+/* Modal para reproducir video */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.modal-content video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .video-card {
+        flex: 0 0 calc(33.33% - 14px);
+    }
+}
+
+@media (max-width: 768px) {
+    .video-card {
+        flex: 0 0 calc(50% - 10px);
+    }
+    
+    .carousel-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-card {
+        flex: 0 0 85%;
+    }
+    
+    .video-carousel {
+        gap: 12px;
+    }
+}
+
+/* Opiniones */
+/* ============================================
+   ESTILOS PARA FORMATO PERIÓDICO CLÁSICO
+   ============================================ */
+
+/* Contenedor principal del artículo periódico */
+.periodico-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: #fdfcf9;
+}
+
+/* Header del periódico */
+.periodico-header {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.periodico-titulo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 10px 0;
+    color: #1a1a1a;
+}
+
+.periodico-lead {
+    font-size: 16px;
+    max-width: 85%;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.5;
+    color: #1e1e1e;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Contenido principal de dos columnas */
+.periodico-main {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Columna izquierda (1/3) */
+.periodico-col-left {
+    flex: 1;
+    border-right: 1px dashed #ccc;
+    padding-right: 25px;
+}
+
+/* Columna derecha (2/3) */
+.periodico-col-right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Estilos de texto periódico */
+.periodico-col-left p,
+.periodico-subcol p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 16px;
+    text-indent: 20px;
+    color: #1e1e1e;
+}
+
+.periodico-col-left p:first-of-type,
+.periodico-subcol p:first-of-type {
+    text-indent: 0;
+}
+
+/* Imagen de periódico */
+.periodico-imagen {
+    width: 90%;
+    border: 1px solid #ccc;
+    background-color: #eae6df;
+    padding: 6px;
+}
+
+.periodico-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.periodico-caption {
+    font-size: 11px;
+    font-style: italic;
+    margin-top: 6px;
+    text-align: left;
+    color: #555;
+    font-family: Arial, sans-serif;
+}
+
+/* Subcolumnas debajo de la imagen */
+.periodico-subcolumnas {
+    display: flex;
+    gap: 25px;
+}
+
+.periodico-subcol {
+    flex: 1;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .periodico-main {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .periodico-col-left {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px dashed #ccc;
+        padding-bottom: 20px;
+    }
+    
+    .periodico-imagen {
+        width: 100%;
+    }
+    
+    .periodico-subcolumnas {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .periodico-titulo {
+        font-size: 28px;
+    }
+    
+    .periodico-lead {
+        max-width: 100%;
+        font-size: 14px;
+    }
+}
+/* ============================================
+   ESTILOS PARA FORMATO DE ENTREVISTA
+   ============================================ */
+
+/* Introducción de la entrevista */
+.entrevista-introduccion {
+    margin: 25px 0 20px;
+}
+
+.entrevista-introduccion p {
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 16px;
+    color: #1e1e1e;
+}
+
+/* Separador entre secciones */
+.entrevista-separador {
+    text-align: center;
+    margin: 30px 0;
+    color: #81638B;
+    font-size: 14px;
+    letter-spacing: 5px;
+}
+
+/* Cuerpo de la entrevista */
+.entrevista-cuerpo {
+    margin: 20px 0;
+}
+
+/* Pregunta */
+.entrevista-pregunta {
+    display: flex;
+    gap: 12px;
+    margin: 25px 0 10px 0;
+    padding-top: 10px;
+}
+
+.pregunta-icon {
+    font-size: 28px;
+    color: #81638B;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.pregunta-texto {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1a1a1a;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.4;
+    flex: 1;
+}
+
+/* Respuesta */
+.entrevista-respuesta {
+    margin-left: 40px;
+    padding-left: 15px;
+    border-left: 2px solid #81638B;
+}
+
+.entrevista-respuesta p {
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 14px;
+    color: #333;
+}
+
+.entrevista-respuesta p:last-child {
+    margin-bottom: 0;
+}
+
+/* Conclusión */
+.entrevista-conclusion {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f8f6f2;
+    border-left: 4px solid #81638B;
+}
+
+.entrevista-conclusion p {
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 0;
+    color: #1e1e1e;
+    font-style: italic;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .entrevista-pregunta {
+        gap: 8px;
+    }
+    
+    .pregunta-icon {
+        font-size: 22px;
+    }
+    
+    .pregunta-texto {
+        font-size: 14px;
+    }
+    
+    .entrevista-respuesta {
+        margin-left: 25px;
+        padding-left: 12px;
+    }
+    
+    .entrevista-respuesta p {
+        font-size: 13px;
+    }
+    
+    .entrevista-conclusion {
+        padding: 15px;
+    }
+}
+/* ============================================
+   ESTILOS PARA BANNER / IMAGEN LARGA
+   ============================================ */
+
+.entrevista-banner {
+    margin: 25px 0 30px;
+    text-align: center;
+}
+
+.banner-img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 6px;
+    background-color: #eae6df;
+    display: block;
+    margin: 0 auto;
+}
+
+.banner-caption {
+    font-size: 11px;
+    font-style: italic;
+    margin-top: 8px;
+    text-align: center;
+    color: #555;
+    font-family: Arial, sans-serif;
+}
+/* ============================================
+   ESTILOS PARA PÁGINA DE INFOGRAFÍAS
+   ============================================ */
+
+.infografias-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.infografias-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.infografias-header h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 48px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.infografias-header p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Lista vertical de infografías */
+.infografias-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* Tarjeta de infografía individual */
+.infografia-item {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infografia-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenedor de la imagen */
+.infografia-imagen {
+    width: 100%;
+    background-color: #eae6df;
+    text-align: center;
+    padding: 20px;
+}
+
+.infografia-imagen img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #d4cfc4;
+    padding: 8px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Contenido textual */
+.infografia-contenido {
+    padding: 25px 30px;
+    text-align: center;
+    border-top: 1px solid #e0ddd5;
+}
+
+.infografia-titulo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.infografia-descripcion {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+/* Separador entre infografías (opcional) */
+.infografia-separador {
+    text-align: center;
+    color: #81638B;
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin: -15px 0 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .infografias-container {
+        padding: 25px 15px;
+    }
+    
+    .infografias-header h1 {
+        font-size: 36px;
+    }
+    
+    .infografia-contenido {
+        padding: 20px;
+    }
+    
+    .infografia-titulo {
+        font-size: 20px;
+    }
+    
+    .infografia-descripcion {
+        font-size: 13px;
+    }
+}
+/* ============================================
+   ESTILOS PARA PÁGINA DE ENTREVISTAS EN VIDEO
+   ============================================ */
+
+.video-entrevistas-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.video-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.video-header h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 48px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.video-header p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Grid de videos */
+.videos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+/* Video horizontal (16:9) - ancho completo */
+.video-horizontal {
+    background: #0a0a0a;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-horizontal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.video-wrapper-horizontal {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    background: #000;
+}
+
+.video-wrapper-horizontal video,
+.video-wrapper-horizontal iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-info {
+    padding: 20px 25px;
+    background: white;
+}
+
+.video-info h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.video-meta {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #81638B;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.video-descripcion {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Contenedor de videos verticales (1 sola columna centrada) */
+.video-vertical-container {
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Video vertical (9:16) */
+.video-vertical {
+    background: #0a0a0a;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-vertical:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.video-wrapper-vertical {
+    position: relative;
+    width: 100%;
+    padding-bottom: 177.77%; /* Ratio 9:16 */
+    background: #000;
+}
+
+.video-wrapper-vertical video,
+.video-wrapper-vertical iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-vertical .video-info {
+    padding: 18px 20px;
+}
+
+.video-vertical .video-info h2 {
+    font-size: 18px;
+}
+
+/* Badge de formato */
+.formato-badge {
+    display: inline-block;
+    background: #81638B20;
+    color: #81638B;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .video-entrevistas-container {
+        padding: 25px 15px;
+    }
+    
+    .video-header h1 {
+        font-size: 36px;
+    }
+    
+    .video-info h2 {
+        font-size: 18px;
+    }
+    
+    .video-vertical .video-info h2 {
+        font-size: 16px;
+    }
+    
+    .video-vertical-container {
+        max-width: 100%;
+    }
+}
+/* Horoscopo */
+/* Newsletter estilo horóscopo con imagen a la izquierda */
+.newsletter-horoscopo {
+    background: #1f2937;
+    color: white;
+    padding: 30px 40px;
+    margin: 40px 0;
+    border-radius: 16px;
+}
+
+.newsletter-contenido-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Imagen izquierda */
+.newsletter-imagen {
+    flex-shrink: 0;
+}
+
+.newsletter-imagen img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Contenido derecho */
+.newsletter-texto {
+    flex: 1;
+    text-align: left;
+}
+
+.newsletter-icon {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.newsletter-texto h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.newsletter-fecha {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+.newsletter-categoria {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.15);
+}
+
+.newsletter-titulo {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.newsletter-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 20px;
+    border: 1px solid white;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.newsletter-link:hover {
+    background: white;
+    color: #1f2937;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .newsletter-horoscopo {
+        padding: 20px;
+    }
+    
+    .newsletter-contenido-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .newsletter-texto {
+        text-align: center;
+    }
+    
+    .newsletter-imagen img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .newsletter-titulo {
+        font-size: 22px;
+    }
+}
